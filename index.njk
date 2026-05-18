@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Natacha Moorooven</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+
+<body class="lang-en">
+
+<header id="site-header">
+    <nav class="navbar">
+        <a href="#" class="nav-logo">
+            <img class="logo logo-color" src="/images/logo-color.png" alt="Dr. Natacha Moorooven">
+            <img class="logo logo-navy" src="/images/logo-navy.png" alt="Dr. Natacha Moorooven">
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about"><span data-lang="en">About</span><span data-lang="fr">À Propos</span><span data-lang="ko">소개</span></a></li>
+            <li><a href="#book"><span data-lang="en">Book</span><span data-lang="fr">Livre</span><span data-lang="ko">책</span></a></li>
+            <li><a href="#purchase"><span data-lang="en">Purchase</span><span data-lang="fr">Acheter</span><span data-lang="ko">구매</span></a></li>
+            <li><a href="#audio"><span data-lang="en">Audio</span><span data-lang="fr">Audio</span><span data-lang="ko">오디오북</span></a></li>
+            <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="fr">Contact</span><span data-lang="ko">연락처</span></a></li>
+        </ul>
+
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="setLang('en', this)">EN</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" onclick="setLang('fr', this)">FR</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" onclick="setLang('ko', this)">KO</button>
+        </div>
+
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+
+<section id="hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <h1 class="hero-title">{{ site.hero_title }}</h1>
+
+            <p class="hero-byline">
+                <span data-lang="en">by Dr. Natacha Moorooven</span>
+                <span data-lang="fr">par Dr. Natacha Moorooven</span>
+                <span data-lang="ko">나타샤 무루벤 박사 저</span>
+            </p>
+
+            <p class="hero-desc" data-lang="en">{{ site.hero_desc_en }}</p>
+            <p class="hero-desc" data-lang="fr">{{ site.hero_desc_fr }}</p>
+            <p class="hero-desc" data-lang="ko">{{ site.hero_desc_ko }}</p>
+
+            <div class="hero-cta">
+                <a href="#purchase" class="btn-cta" data-lang="en">Get Your Copy</a>
+                <a href="#purchase" class="btn-cta" data-lang="fr">Obtenir votre exemplaire</a>
+                <a href="#purchase" class="btn-cta" data-lang="ko">구매하기</a>
+            </div>
+        </div>
+
+        <div class="hero-book-wrap">
+            <img src="/images/book-cover.jpg"
+                 alt="Un Ruisseau Dans le Désert — Dr. Natacha Moorooven"
+                 class="hero-book-img"
+                 onerror="this.style.display='none';document.getElementById('book-ph-hero').style.display='flex'">
+            <div class="book-placeholder" id="book-ph-hero">
+                <span>{{ site.hero_title }}</span>
+                <small>Dr. Natacha Moorooven</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="wave-bottom">
+        <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,35 Q360,70 720,35 Q1080,0 1440,35 L1440,70 L0,70 Z" fill="#faf6f1"/>
+        </svg>
+    </div>
+</section>
+
+
+<section id="about">
+    <div class="section-inner about-layout">
+        <div class="about-photo-wrap">
+            <img src="/images/profile.jpg"
+                 alt="Dr. Natacha Moorooven"
+                 class="about-photo"
+                 onerror="this.style.display='none';document.getElementById('photo-ph').style.display='flex'">
+            <div class="photo-placeholder" id="photo-ph">
+                <span>Dr. Natacha<br>Moorooven</span>
+            </div>
+        </div>
+
+        <div class="about-text">
+            <h2>
+                <span data-lang="en">About the Author</span>
+                <span data-lang="fr">À Propos de l'Auteure</span>
+                <span data-lang="ko">저자 소개</span>
+            </h2>
+
+            <div class="about-body" data-lang="en">{{ site.about_en | md | safe }}</div>
+            <div class="about-body" data-lang="fr">{{ site.about_fr | md | safe }}</div>
+            <div class="about-body" data-lang="ko">{{ site.about_ko | md | safe }}</div>
+        </div>
+    </div>
+</section>
+
+
+<section id="book" class="section-alt">
+    <div class="section-inner centered">
+        <h2 class="section-title">
+            <span data-lang="en">About the Book</span>
+            <span data-lang="fr">À Propos du Livre</span>
+            <span data-lang="ko">책 소개</span>
+        </h2>
+
+        <div class="book-detail">
+            <div class="book-detail-img">
+                <img src="/images/book-cover.jpg" alt="Un Ruisseau Dans le Désert"
+                     onerror="this.style.display='none';document.getElementById('book-ph-detail').style.display='flex'">
+                <div class="book-placeholder small" id="book-ph-detail">
+                    <span>{{ site.hero_title }}</span>
+                </div>
+            </div>
+
+            <div class="book-detail-text">
+                <h3 class="book-title-display">{{ site.hero_title }}</h3>
+                <p class="book-author-display">Dr. Natacha Moorooven</p>
+
+                <p data-lang="en">{{ site.book_desc_en }}</p>
+                <p data-lang="fr">{{ site.book_desc_fr }}</p>
+                <p data-lang="ko">{{ site.book_desc_ko }}</p>
+
+                <div class="book-cta">
+                    <a href="#purchase" class="btn-secondary" data-lang="en">Where to Buy →</a>
+                    <a href="#purchase" class="btn-secondary" data-lang="fr">Où Acheter →</a>
+                    <a href="#purchase" class="btn-secondary" data-lang="ko">구매처 보기 →</a>
+                    <a href="#audio" class="btn-outline" data-lang="en">Listen to Excerpt →</a>
+                    <a href="#audio" class="btn-outline" data-lang="fr">Écouter un Extrait →</a>
+                    <a href="#audio" class="btn-outline" data-lang="ko">오디오 미리듣기 →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="purchase">
+    <div class="section-inner centered">
+        <h2 class="section-title">
+            <span data-lang="en">Purchase</span>
+            <span data-lang="fr">Où Acheter</span>
+            <span data-lang="ko">구매</span>
+        </h2>
+
+        <p class="section-sub" data-lang="en">Available through the following retailers worldwide:</p>
+        <p class="section-sub" data-lang="fr">Disponible chez les distributeurs suivants dans le monde entier :</p>
+        <p class="section-sub" data-lang="ko">아래 전 세계 판매처에서 구매하실 수 있습니다:</p>
+
+        <div class="purchase-grid">
+            <a href="{{ site.purchase_eu_url }}" class="purchase-card" target="_blank" rel="noopener">
+                <div class="purchase-flag">🇪🇺</div>
+                <div class="purchase-region-name">
+                    <span data-lang="en">European Union Division</span>
+                    <span data-lang="fr">Division Union Européenne</span>
+                    <span data-lang="ko">유럽연합 지회</span>
+                </div>
+                <div class="purchase-link-label">
+                    <span data-lang="en">Visit store →</span>
+                    <span data-lang="fr">Visiter →</span>
+                    <span data-lang="ko">방문하기 →</span>
+                </div>
+            </a>
+
+            <a href="{{ site.purchase_ch_url }}" class="purchase-card" target="_blank" rel="noopener">
+                <div class="purchase-flag">🇨🇭</div>
+                <div class="purchase-region-name">
+                    <span data-lang="en">Switzerland — Vie-Santé</span>
+                    <span data-lang="fr">Suisse — Vie-Santé</span>
+                    <span data-lang="ko">스위스 — Vie-Santé</span>
+                </div>
+                <div class="purchase-link-label">
+                    <span data-lang="en">Visit store →</span>
+                    <span data-lang="fr">Visiter →</span>
+                    <span data-lang="ko">방문하기 →</span>
+                </div>
+            </a>
+
+            <a href="{{ site.purchase_us_url }}" class="purchase-card" target="_blank" rel="noopener">
+                <div class="purchase-flag">🇺🇸</div>
+                <div class="purchase-region-name">
+                    <span data-lang="en">United States — Living Well ABC</span>
+                    <span data-lang="fr">États-Unis — Living Well ABC</span>
+                    <span data-lang="ko">미국 — Living Well ABC</span>
+                </div>
+                <div class="purchase-link-label">
+                    <span data-lang="en">Visit store →</span>
+                    <span data-lang="fr">Visiter →</span>
+                    <span data-lang="ko">방문하기 →</span>
+                </div>
+            </a>
+
+            <div class="purchase-card no-link">
+                <div class="purchase-flag">🇨🇦</div>
+                <div class="purchase-region-name">
+                    <span data-lang="en">Canada — Librairie Adventiste</span>
+                    <span data-lang="fr">Canada — Librairie Adventiste</span>
+                    <span data-lang="ko">캐나다 — 어드벤티스트 서점</span>
+                </div>
+                <div class="purchase-contact-info">
+                    <a href="mailto:{{ site.purchase_ca_email }}">{{ site.purchase_ca_email }}</a><br>
+                    <span>{{ site.purchase_ca_phone }}</span><br>
+                    <span>{{ site.purchase_ca_address }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="audio" class="section-alt">
+    <div class="section-inner centered">
+        <h2 class="section-title">
+            <span data-lang="en">Audiobook</span>
+            <span data-lang="fr">Livre Audio</span>
+            <span data-lang="ko">오디오북</span>
+        </h2>
+
+        <div class="audio-placeholder">
+            <div class="audio-icon">♪</div>
+            <p data-lang="en">Audiobook coming soon.<br>Check back here for updates.</p>
+            <p data-lang="fr">Livre audio disponible prochainement.<br>Revenez bientôt.</p>
+            <p data-lang="ko">오디오북 출시 예정입니다.<br>곧 업데이트됩니다.</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <div class="section-inner centered">
+        <h2 class="section-title">
+            <span data-lang="en">Contact</span>
+            <span data-lang="fr">Contact</span>
+            <span data-lang="ko">연락처</span>
+        </h2>
+
+        <p class="section-sub" data-lang="en">For speaking invitations, media inquiries, or partnership opportunities, please reach out.</p>
+        <p class="section-sub" data-lang="fr">Pour des invitations à prendre la parole, des demandes médias ou des opportunités de partenariat, n'hésitez pas à nous contacter.</p>
+        <p class="section-sub" data-lang="ko">강연 초청, 미디어 문의, 협업 제안은 아래로 연락해 주세요.</p>
+
+        <a href="mailto:{{ site.contact_email }}" class="btn-cta contact-btn">
+            <span data-lang="en">Send a Message</span>
+            <span data-lang="fr">Envoyer un Message</span>
+            <span data-lang="ko">메시지 보내기</span>
+        </a>
+    </div>
+</section>
+
+
+<footer>
+    <div class="footer-inner">
+        <img class="footer-logo" src="/images/logo-color.png" alt="Dr. Natacha Moorooven">
+        <p class="footer-name">Dr. Natacha Moorooven</p>
+        <p class="footer-copy" data-lang="en">© {{ site.footer_year }} Dr. Natacha Moorooven. All rights reserved.</p>
+        <p class="footer-copy" data-lang="fr">© {{ site.footer_year }} Dr. Natacha Moorooven. Tous droits réservés.</p>
+        <p class="footer-copy" data-lang="ko">© {{ site.footer_year }} 나타샤 무루벤 박사. 모든 권리 보유.</p>
+    </div>
+</footer>
+
+
+<script>
+    function setLang(lang, btn) {
+        document.body.className = 'lang-' + lang;
+        document.documentElement.lang = lang;
+        document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('active'); });
+        if (btn) btn.classList.add('active');
+        try { localStorage.setItem('natacha-lang', lang); } catch(e) {}
+    }
+    (function() {
+        var saved = 'en';
+        try { saved = localStorage.getItem('natacha-lang') || 'en'; } catch(e) {}
+        var btn = document.querySelector('.lang-btn[onclick*="\'' + saved + '\'"]');
+        setLang(saved, btn);
+    })();
+    function toggleMenu() { document.getElementById('nav-links').classList.toggle('open'); }
+    window.addEventListener('scroll', function() {
+        document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 60);
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                var top = target.getBoundingClientRect().top + window.scrollY - document.getElementById('site-header').offsetHeight - 16;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+                document.getElementById('nav-links').classList.remove('open');
+            }
+        });
+    });
+
+    /* Netlify Identity — redirect after login */
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+            if (!user) {
+                window.netlifyIdentity.on("login", function() {
+                    document.location.href = "/admin/";
+                });
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

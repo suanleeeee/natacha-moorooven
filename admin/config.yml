@@ -1,0 +1,121 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "site/images"
+public_folder: "/images"
+
+locale: "en"
+
+collections:
+  - name: "site"
+    label: "Website Content"
+    files:
+      - name: "main"
+        label: "Edit Website / Modifier le site / 사이트 수정"
+        file: "site/_data/site.yaml"
+        fields:
+
+          # ── HERO ──
+          - label: "━━ HERO SECTION ━━"
+            name: "hero_divider"
+            widget: "hidden"
+            default: ""
+
+          - label: "Book Title (shown in all languages)"
+            name: "hero_title"
+            widget: "string"
+            hint: "The main title displayed in the hero section."
+
+          - label: "Short Description — English"
+            name: "hero_desc_en"
+            widget: "text"
+
+          - label: "Short Description — Français"
+            name: "hero_desc_fr"
+            widget: "text"
+
+          - label: "Short Description — 한국어"
+            name: "hero_desc_ko"
+            widget: "text"
+
+          # ── ABOUT ──
+          - label: "━━ ABOUT THE AUTHOR ━━"
+            name: "about_divider"
+            widget: "hidden"
+            default: ""
+
+          - label: "Biography — English"
+            name: "about_en"
+            widget: "markdown"
+            hint: "You can use paragraphs. Press Enter twice for a new paragraph."
+
+          - label: "Biographie — Français"
+            name: "about_fr"
+            widget: "markdown"
+
+          - label: "약력 — 한국어"
+            name: "about_ko"
+            widget: "markdown"
+
+          # ── BOOK ──
+          - label: "━━ BOOK DESCRIPTION ━━"
+            name: "book_divider"
+            widget: "hidden"
+            default: ""
+
+          - label: "Book Description — English"
+            name: "book_desc_en"
+            widget: "text"
+
+          - label: "Book Description — Français"
+            name: "book_desc_fr"
+            widget: "text"
+
+          - label: "Book Description — 한국어"
+            name: "book_desc_ko"
+            widget: "text"
+
+          # ── PURCHASE ──
+          - label: "━━ PURCHASE LINKS ━━"
+            name: "purchase_divider"
+            widget: "hidden"
+            default: ""
+
+          - label: "EU Store URL"
+            name: "purchase_eu_url"
+            widget: "string"
+
+          - label: "Switzerland Store URL"
+            name: "purchase_ch_url"
+            widget: "string"
+
+          - label: "USA Store URL"
+            name: "purchase_us_url"
+            widget: "string"
+
+          - label: "Canada — Email"
+            name: "purchase_ca_email"
+            widget: "string"
+
+          - label: "Canada — Phone"
+            name: "purchase_ca_phone"
+            widget: "string"
+
+          - label: "Canada — Address"
+            name: "purchase_ca_address"
+            widget: "string"
+
+          # ── CONTACT ──
+          - label: "━━ CONTACT ━━"
+            name: "contact_divider"
+            widget: "hidden"
+            default: ""
+
+          - label: "Contact Email"
+            name: "contact_email"
+            widget: "string"
+
+          - label: "Copyright Year"
+            name: "footer_year"
+            widget: "string"

@@ -1,0 +1,53 @@
+# ================================================================
+# SITE CONTENT — Edit this file to update the website
+# CONTENU DU SITE — Modifiez ce fichier pour mettre à jour le site
+# ================================================================
+# (This file is edited through the /admin panel — do not edit manually)
+
+# ── HERO ──────────────────────────────────────────────────────
+hero_title: "Un Ruisseau Dans le Désert"
+
+hero_desc_en: "A devotional journey of faith, hope, and renewal — born from twenty years of ministry across three continents."
+hero_desc_fr: "Un voyage de dévotion, de foi, d'espoir et de renouveau — né de vingt ans de ministère sur trois continents."
+hero_desc_ko: "세 대륙에서의 20년 사역을 통해 탄생한 믿음과 희망, 그리고 새로운 시작의 묵상 여정."
+
+# ── ABOUT ─────────────────────────────────────────────────────
+about_en: |
+  The author, Dr. Natacha Moorooven, an educator at heart, hails from Mauritius. She spent the last twenty years of her life in Africa, America and Asia. She holds a bachelor's degree in Information Management and Theology, a master's degree in Religion and Ethics, and a PhD in International Relations.
+
+  She served as an intern pastor, then as director of the Voice of Hope in Mauritius. She worked as a missionary with Adventist churches in several countries, and also worked with trafficking victims. She served at the General Conference Communications Department in Washington, D.C.
+
+  She joined Yongin University in March 2014, where she currently serves as Assistant Professor.
+
+about_fr: |
+  L'auteure, Dr. Natacha Moorooven, éducatrice dans l'âme, est originaire de l'île Maurice. Elle a passé les vingt dernières années de sa vie en Afrique, en Amérique et en Asie. Elle est titulaire d'une licence en gestion de l'information et en théologie, d'un master en religion et éthique, et d'un doctorat en relations internationales.
+
+  Elle a exercé en tant que pasteure stagiaire, puis directrice de la Voice of Hope à l'île Maurice. Elle a travaillé comme missionnaire avec des églises adventistes dans plusieurs pays, et a également travaillé auprès de victimes de la traite des êtres humains. Elle a servi au département des communications de la Conférence Générale à Washington, D.C.
+
+  Elle a rejoint l'Université de Yongin en mars 2014, où elle occupe actuellement le poste de professeure adjointe.
+
+about_ko: |
+  저자 나타샤 무루벤 박사는 타고난 교육자로 모리셔스 출신입니다. 지난 20년간 아프리카, 미주, 아시아에서 활동하였으며, 정보관리 및 신학 학사, 종교 및 윤리 석사, 국제관계학 박사 학위를 보유하고 있습니다.
+
+  인턴 목사로 섬긴 후 모리셔스 Voice of Hope 디렉터로 활동하였으며, 여러 나라 제칠일안식일예수재림교회에서 선교사로 봉사하고 인신매매 피해자 지원 업무도 담당하였습니다. 워싱턴 D.C. 총회 커뮤니케이션부에서도 근무하였습니다.
+
+  2014년 3월부터 용인대학교 조교수로 재직 중입니다.
+
+# ── BOOK ──────────────────────────────────────────────────────
+book_desc_en: "This devotional book, born from passion and lived experience, invites readers into a journey of spiritual renewal. Each page offers a stream of hope for those walking through their own desert seasons of life."
+book_desc_fr: "Ce livre de dévotion, né de la passion et de l'expérience vécue, invite les lecteurs dans un voyage de renouveau spirituel. Chaque page offre un ruisseau d'espoir pour ceux qui traversent leurs propres saisons de désert."
+book_desc_ko: "열정과 삶의 경험에서 탄생한 이 묵상집은 독자들을 영적 쇄신의 여정으로 초대합니다. 각 페이지는 삶의 광야 시절을 걷고 있는 이들에게 희망의 작은 시냇물을 선사합니다."
+
+# ── PURCHASE ──────────────────────────────────────────────────
+purchase_eu_url: "https://women.eud.adventist.org/en/news/news/go/2019-03-07/devotional-book-in-french-un-ruisseau-dans-le-desert/"
+purchase_ch_url: "http://www.vie-sante.ch/meditations/2896-ruisseau-dans-le-desert-un-9788963753102.html"
+purchase_us_url: "https://shop.livingwellabc.com/all-products/browse/keyword/natacha-moorooven"
+purchase_ca_email: "librairieadventiste@sdaqc.org"
+purchase_ca_phone: "1-450-651-6526"
+purchase_ca_address: "940 Chemin de Chambly, Longueuil QC J4H 3M3, Canada"
+
+# ── CONTACT ───────────────────────────────────────────────────
+contact_email: "librairieadventiste@sdaqc.org"
+
+# ── FOOTER ────────────────────────────────────────────────────
+footer_year: "2024"
