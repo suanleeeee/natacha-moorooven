@@ -77,7 +77,7 @@ body.lang-ko a.btn-outline[data-lang="ko"] { display: inline-block; }
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 #site-header.scrolled {
-    background: var(--white);
+    background: #f5ebd3;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
 }
 
