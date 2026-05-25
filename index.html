@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Natacha Moorooven</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="lang-en">
+
+<header id="site-header" class="scrolled">
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <img class="logo logo-color" src="/images/logo-color.png" alt="Dr. Natacha Moorooven">
+            <img class="logo logo-navy" src="/images/logo-navy.png" alt="Dr. Natacha Moorooven">
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+            <li class="nav-dropdown">
+                <a href="#" class="dropdown-toggle">
+                    <span data-lang="en">About ▾</span>
+                    <span data-lang="fr">À Propos ▾</span>
+                    <span data-lang="ko">소개 ▾</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/about"><span data-lang="en">About the Author</span><span data-lang="fr">À Propos de l'Auteure</span><span data-lang="ko">저자 소개</span></a></li>
+                    <li><a href="/book"><span data-lang="en">About the Book</span><span data-lang="fr">À Propos du Livre</span><span data-lang="ko">책 소개</span></a></li>
+                </ul>
+            </li>
+            <li><a href="/purchase"><span data-lang="en">Purchase</span><span data-lang="fr">Acheter</span><span data-lang="ko">구매</span></a></li>
+            <li><a href="/audio"><span data-lang="en">Audio</span><span data-lang="fr">Audio</span><span data-lang="ko">오디오북</span></a></li>
+            <li><a href="/about#contact"><span data-lang="en">Contact</span><span data-lang="fr">Contact</span><span data-lang="ko">연락처</span></a></li>
+        </ul>
+
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="setLang('en', this)">EN</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" onclick="setLang('fr', this)">FR</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" onclick="setLang('ko', this)">KO</button>
+        </div>
+
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+
+<section id="hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <h1 class="hero-title"></h1>
+
+            <p class="hero-byline">
+                <span data-lang="en">by Dr. Natacha Moorooven</span>
+                <span data-lang="fr">par Dr. Natacha Moorooven</span>
+                <span data-lang="ko">나타샤 무루벤 박사 저</span>
+            </p>
+
+            <p class="hero-desc" data-lang="en"></p>
+            <p class="hero-desc" data-lang="fr"></p>
+            <p class="hero-desc" data-lang="ko"></p>
+
+            <div class="hero-cta">
+                <a href="/book" class="btn-cta" data-lang="en">Get Your Copy</a>
+                <a href="/book" class="btn-cta" data-lang="fr">Obtenir votre exemplaire</a>
+                <a href="/book" class="btn-cta" data-lang="ko">구매하기</a>
+            </div>
+        </div>
+
+        <div class="hero-book-wrap">
+            <img src="/images/book-cover.jpg"
+                 alt="Un Ruisseau Dans le Désert — Dr. Natacha Moorooven"
+                 class="hero-book-img"
+                 onerror="this.style.display='none';document.getElementById('book-ph-hero').style.display='flex'">
+            <div class="book-placeholder" id="book-ph-hero">
+                <span></span>
+                <small>Dr. Natacha Moorooven</small>
+            </div>
+        </div>
+    </div>
+
+    <div class="wave-bottom">
+        <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <rect width="1440" height="70" fill="#1e3a5f"/>
+            <path d="M0,35 Q360,70 720,35 Q1080,0 1440,35 L1440,70 L0,70 Z" fill="#fcf6e8"/>
+        </svg>
+    </div>
+</section>
+
+
+<footer>
+    <div class="footer-inner">
+        <img class="footer-logo" src="/images/logo-navy.png" alt="Dr. Natacha Moorooven">
+        <p class="footer-name">Dr. Natacha Moorooven</p>
+        <p class="footer-copy" data-lang="en">©  Dr. Natacha Moorooven. All rights reserved.</p>
+        <p class="footer-copy" data-lang="fr">©  Dr. Natacha Moorooven. Tous droits réservés.</p>
+        <p class="footer-copy" data-lang="ko">©  나타샤 무루벤 박사. 모든 권리 보유.</p>
+    </div>
+</footer>
+
+
+<script>
+    function setLang(lang, btn) {
+        document.body.className = 'lang-' + lang;
+        document.documentElement.lang = lang;
+        document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('active'); });
+        if (btn) btn.classList.add('active');
+        try { localStorage.setItem('natacha-lang', lang); } catch(e) {}
+    }
+    (function() {
+        var saved = 'en';
+        try { saved = localStorage.getItem('natacha-lang') || 'en'; } catch(e) {}
+        var btn = document.querySelector('.lang-btn[onclick*="\'' + saved + '\'"]');
+        setLang(saved, btn);
+    })();
+    function toggleMenu() { document.getElementById('nav-links').classList.toggle('open'); }
+    window.addEventListener('scroll', function() {
+        document.getElementById('site-header').classList.add('scrolled');
+    });
+    document.querySelectorAll('.dropdown-toggle').forEach(function(t) {
+        t.addEventListener('click', function(e) {
+            e.preventDefault();
+            this.closest('.nav-dropdown').classList.toggle('open');
+        });
+    });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-dropdown')) {
+            document.querySelectorAll('.nav-dropdown').forEach(function(d) { d.classList.remove('open'); });
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Book — Dr. Natacha Moorooven</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="lang-en">
+
+<header id="site-header" class="scrolled">
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <img class="logo logo-navy" src="/images/logo-navy.png" alt="Dr. Natacha Moorooven">
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+            <li class="nav-dropdown">
+                <a href="#" class="dropdown-toggle nav-active">
+                    <span data-lang="en">About ▾</span>
+                    <span data-lang="fr">À Propos ▾</span>
+                    <span data-lang="ko">소개 ▾</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/about"><span data-lang="en">About the Author</span><span data-lang="fr">À Propos de l'Auteure</span><span data-lang="ko">저자 소개</span></a></li>
+                    <li><a href="/book" class="nav-active"><span data-lang="en">About the Book</span><span data-lang="fr">À Propos du Livre</span><span data-lang="ko">책 소개</span></a></li>
+                </ul>
+            </li>
+            <li><a href="/purchase"><span data-lang="en">Purchase</span><span data-lang="fr">Acheter</span><span data-lang="ko">구매</span></a></li>
+            <li><a href="/audio"><span data-lang="en">Audio</span><span data-lang="fr">Audio</span><span data-lang="ko">오디오북</span></a></li>
+            <li><a href="/about#contact"><span data-lang="en">Contact</span><span data-lang="fr">Contact</span><span data-lang="ko">연락처</span></a></li>
+        </ul>
+
+        <div class="lang-switcher">
+            <button class="lang-btn" onclick="setLang('en', this)">EN</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" onclick="setLang('fr', this)">FR</button>
+            <span class="lang-sep">|</span>
+            <button class="lang-btn" onclick="setLang('ko', this)">KO</button>
+        </div>
+
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+</header>
+
+
+<section id="book">
+    <div class="section-inner centered">
+        <h2 class="section-title">
+            <span data-lang="en">About the Book</span>
+            <span data-lang="fr">À Propos du Livre</span>
+            <span data-lang="ko">책 소개</span>
+        </h2>
+
+        <div class="book-detail">
+            <div class="book-detail-img">
+                <img src="/images/book-cover.jpg" alt="Un Ruisseau Dans le Désert"
+                     onerror="this.style.display='none';document.getElementById('book-ph-detail').style.display='flex'">
+                <div class="book-placeholder small" id="book-ph-detail">
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="book-detail-text">
+                <h3 class="book-title-display"></h3>
+                <p class="book-author-display">Dr. Natacha Moorooven</p>
+
+                <p data-lang="en"></p>
+                <p data-lang="fr"></p>
+                <p data-lang="ko"></p>
+
+                <div class="book-cta">
+                    <a href="/preview" class="btn-secondary" data-lang="en">Read Preview →</a>
+                    <a href="/preview" class="btn-secondary" data-lang="fr">Lire l'Extrait →</a>
+                    <a href="/preview" class="btn-secondary" data-lang="ko">미리보기 →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="footer-inner">
+        <img class="footer-logo" src="/images/logo-navy.png" alt="Dr. Natacha Moorooven">
+        <p class="footer-name">Dr. Natacha Moorooven</p>
+        <p class="footer-copy" data-lang="en">©  Dr. Natacha Moorooven. All rights reserved.</p>
+        <p class="footer-copy" data-lang="fr">©  Dr. Natacha Moorooven. Tous droits réservés.</p>
+        <p class="footer-copy" data-lang="ko">©  나타샤 무루벤 박사. 모든 권리 보유.</p>
+    </div>
+</footer>
+
+
+<script>
+    function setLang(lang, btn) {
+        document.body.className = 'lang-' + lang;
+        document.documentElement.lang = lang;
+        document.querySelectorAll('.lang-btn').forEach(function(b) { b.classList.remove('active'); });
+        if (btn) btn.classList.add('active');
+        try { localStorage.setItem('natacha-lang', lang); } catch(e) {}
+    }
+    (function() {
+        var saved = 'en';
+        try { saved = localStorage.getItem('natacha-lang') || 'en'; } catch(e) {}
+        var btn = document.querySelector('.lang-btn[onclick*="\'' + saved + '\'"]');
+        setLang(saved, btn);
+    })();
+    function toggleMenu() { document.getElementById('nav-links').classList.toggle('open'); }
+    window.addEventListener('scroll', function() {
+        document.getElementById('site-header').classList.add('scrolled');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                var top = target.getBoundingClientRect().top + window.scrollY - document.getElementById('site-header').offsetHeight - 16;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+                document.getElementById('nav-links').classList.remove('open');
+            }
+        });
+    });
+    document.querySelectorAll('.dropdown-toggle').forEach(function(t) {
+        t.addEventListener('click', function(e) {
+            e.preventDefault();
+            this.closest('.nav-dropdown').classList.toggle('open');
+        });
+    });
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-dropdown')) {
+            document.querySelectorAll('.nav-dropdown').forEach(function(d) { d.classList.remove('open'); });
+        }
+    });
+</script>
+
+</body>
+</html>
