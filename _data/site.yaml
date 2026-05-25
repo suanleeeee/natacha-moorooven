@@ -46,6 +46,11 @@ purchase_ca_email: "librairieadventiste@sdaqc.org"
 purchase_ca_phone: "1-450-651-6526"
 purchase_ca_address: "940 Chemin de Chambly, Longueuil QC J4H 3M3, Canada"
 
+# ── AFFILIATION ───────────────────────────────────────────────
+affil_en: "Assistant Professor · Yongin University · South Korea"
+affil_fr: "Professeure adjointe · Université de Yongin · Corée du Sud"
+affil_ko: "조교수 · 용인대학교 · 대한민국"
+
 # ── CONTACT ───────────────────────────────────────────────────
 contact_email: "librairieadventiste@sdaqc.org"
 

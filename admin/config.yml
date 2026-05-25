@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: suanleeeee/natacha-moorooven
   branch: main
 
 media_folder: "site/images"
@@ -104,6 +105,25 @@ collections:
 
           - label: "Canada — Address"
             name: "purchase_ca_address"
+            widget: "string"
+
+          # ── AFFILIATION ──
+          - label: "━━ AFFILIATION ━━"
+            name: "affil_divider"
+            widget: "hidden"
+            default: ""
+
+          - label: "Affiliation — English"
+            name: "affil_en"
+            widget: "string"
+            hint: "e.g. Assistant Professor · Yongin University · South Korea"
+
+          - label: "Affiliation — Français"
+            name: "affil_fr"
+            widget: "string"
+
+          - label: "소속 — 한국어"
+            name: "affil_ko"
             widget: "string"
 
           # ── CONTACT ──
