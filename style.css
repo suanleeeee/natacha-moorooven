@@ -13,8 +13,8 @@
 
 /* ── COLOR PALETTE ──────────────────────────────────────────── */
 :root {
-    --cream:        #faf6f1;   /* main background */
-    --cream-alt:    #f2ece3;   /* alternate section background */
+    --cream:        #fcf6e8;   /* main background */
+    --cream-alt:    #ede5d0;   /* alternate section background */
     --navy:         #1e3a5f;   /* headings, buttons, accents */
     --navy-light:   #2a4f7c;   /* hover states */
     --brown:        #8b7355;   /* secondary accent */
@@ -77,7 +77,7 @@ body.lang-ko a.btn-outline[data-lang="ko"] { display: inline-block; }
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 #site-header.scrolled {
-    background: #fcf6e8;
+    background: var(--cream);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.07);
 }
 
@@ -860,7 +860,6 @@ h2.section-title::after,
 /* ── FOOTER ──────────────────────────────────────────────────── */
 footer {
     background: var(--cream);
-    border-top: 1px solid rgba(0,0,0,0.07);
     padding: 3.5rem 2rem;
     text-align: center;
 }
