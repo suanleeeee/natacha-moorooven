@@ -85,7 +85,13 @@
 
     <div class="wave-bottom">
         <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,35 Q360,70 720,35 Q1080,0 1440,35 L1440,70 L0,70 Z" fill="#1e3a5f"/>
+            <defs>
+                <linearGradient id="waveGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2d4e6e"/>
+                    <stop offset="100%" stop-color="#e8ddd0"/>
+                </linearGradient>
+            </defs>
+            <path d="M0,35 Q360,70 720,35 Q1080,0 1440,35 L1440,70 L0,70 Z" fill="url(#waveGrad)"/>
         </svg>
     </div>
 </section>
