@@ -85,67 +85,65 @@
 
 
 <section id="about">
-    <div class="section-inner about-layout">
-        <div class="about-photo-wrap">
-            <img src="/images/profile.jpg"
-                 alt="Dr. Natacha Moorooven"
-                 class="about-photo"
-                 onerror="this.style.display='none';document.getElementById('photo-ph').style.display='flex'">
-            <div class="photo-placeholder" id="photo-ph">
-                <span>Dr. Natacha<br>Moorooven</span>
-            </div>
-        </div>
+    <div class="section-inner about-book-grid">
 
-        <div class="about-text">
-            <h2>
+        <div class="author-col">
+            <h2 class="col-heading">
                 <span data-lang="en">About the Author</span>
                 <span data-lang="fr">À Propos de l'Auteure</span>
                 <span data-lang="ko">저자 소개</span>
             </h2>
-
-            <div class="about-body" data-lang="en">{{ site.about_en | md | safe }}</div>
-            <div class="about-body" data-lang="fr">{{ site.about_fr | md | safe }}</div>
-            <div class="about-body" data-lang="ko">{{ site.about_ko | md | safe }}</div>
-        </div>
-    </div>
-</section>
-
-
-<section id="book" class="section-alt">
-    <div class="section-inner centered">
-        <h2 class="section-title">
-            <span data-lang="en">About the Book</span>
-            <span data-lang="fr">À Propos du Livre</span>
-            <span data-lang="ko">책 소개</span>
-        </h2>
-
-        <div class="book-detail">
-            <div class="book-detail-img">
-                <img src="/images/book-cover.jpg" alt="Un Ruisseau Dans le Désert"
-                     onerror="this.style.display='none';document.getElementById('book-ph-detail').style.display='flex'">
-                <div class="book-placeholder small" id="book-ph-detail">
-                    <span>{{ site.hero_title }}</span>
+            <div class="about-photo-wrap">
+                <img src="/images/profile.jpg"
+                     alt="Dr. Natacha Moorooven"
+                     class="about-photo"
+                     onerror="this.style.display='none';document.getElementById('photo-ph').style.display='flex'">
+                <div class="photo-placeholder" id="photo-ph">
+                    <span>Dr. Natacha<br>Moorooven</span>
                 </div>
             </div>
+            <div class="about-text">
+                <div class="about-body" data-lang="en">{{ site.about_en | md | safe }}</div>
+                <div class="about-body" data-lang="fr">{{ site.about_fr | md | safe }}</div>
+                <div class="about-body" data-lang="ko">{{ site.about_ko | md | safe }}</div>
+            </div>
+        </div>
 
-            <div class="book-detail-text">
-                <h3 class="book-title-display">{{ site.hero_title }}</h3>
-                <p class="book-author-display">Dr. Natacha Moorooven</p>
+        <div class="col-sep"></div>
 
-                <p data-lang="en">{{ site.book_desc_en }}</p>
-                <p data-lang="fr">{{ site.book_desc_fr }}</p>
-                <p data-lang="ko">{{ site.book_desc_ko }}</p>
-
-                <div class="book-cta">
-                    <a href="#purchase" class="btn-secondary" data-lang="en">Where to Buy →</a>
-                    <a href="#purchase" class="btn-secondary" data-lang="fr">Où Acheter →</a>
-                    <a href="#purchase" class="btn-secondary" data-lang="ko">구매처 보기 →</a>
-                    <a href="#audio" class="btn-outline" data-lang="en">Listen to Excerpt →</a>
-                    <a href="#audio" class="btn-outline" data-lang="fr">Écouter un Extrait →</a>
-                    <a href="#audio" class="btn-outline" data-lang="ko">오디오 미리듣기 →</a>
+        <div id="book" class="book-col">
+            <h2 class="col-heading">
+                <span data-lang="en">About the Book</span>
+                <span data-lang="fr">À Propos du Livre</span>
+                <span data-lang="ko">책 소개</span>
+            </h2>
+            <div class="book-col-inner">
+                <div class="book-col-cover-wrap">
+                    <img src="/images/book-cover.jpg" alt="{{ site.hero_title }}"
+                         class="book-col-cover"
+                         onerror="this.style.display='none';document.getElementById('book-ph-detail').style.display='flex'">
+                    <div class="book-placeholder small" id="book-ph-detail">
+                        <span>{{ site.hero_title }}</span>
+                    </div>
+                </div>
+                <div class="book-col-text">
+                    <h3 class="book-title-display">{{ site.hero_title }}</h3>
+                    <p class="book-author-display">Dr. Natacha Moorooven</p>
+                    <p data-lang="en">{{ site.book_desc_en }}</p>
+                    <p data-lang="fr">{{ site.book_desc_fr }}</p>
+                    <p data-lang="ko">{{ site.book_desc_ko }}</p>
+                    <div class="book-cta">
+                        <a href="/preview" class="btn-secondary" data-lang="en">Read Preview →</a>
+                        <a href="/preview" class="btn-secondary" data-lang="fr">Lire l'Extrait →</a>
+                        <a href="/preview" class="btn-secondary" data-lang="ko">미리보기 →</a>
+                        <a href="#audio" class="btn-outline" data-lang="en">Listen to Excerpt →</a>
+                        <a href="#audio" class="btn-outline" data-lang="fr">Écouter un Extrait →</a>
+                        <a href="#audio" class="btn-outline" data-lang="ko">오디오 미리듣기 →</a>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
@@ -160,7 +158,7 @@
 
         <p class="section-sub" data-lang="en">Available through the following retailers worldwide:</p>
         <p class="section-sub" data-lang="fr">Disponible chez les distributeurs suivants dans le monde entier :</p>
-        <p class="section-sub" data-lang="ko">아래 전 세계 판매처에서 구매하실 수 있습니다:</p>
+        <p class="section-sub" data-lang="ko">전 세계 판매처에서 구매하실 수 있습니다:</p>
 
         <div class="purchase-grid">
             <a href="{{ site.purchase_eu_url }}" class="purchase-card" target="_blank" rel="noopener">
