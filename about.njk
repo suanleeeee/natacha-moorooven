@@ -3,29 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Natacha Moorooven</title>
+    <title>About the Author — Dr. Natacha Moorooven</title>
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body class="lang-en">
 
-<header id="site-header">
+<header id="site-header" class="scrolled">
     <nav class="navbar">
         <a href="/" class="nav-logo">
-            <img class="logo logo-color" src="/images/logo-color.png" alt="Dr. Natacha Moorooven">
             <img class="logo logo-navy" src="/images/logo-navy.png" alt="Dr. Natacha Moorooven">
         </a>
 
         <ul class="nav-links" id="nav-links">
             <li class="nav-dropdown">
-                <a href="#" class="dropdown-toggle">
+                <a href="#" class="dropdown-toggle nav-active">
                     <span data-lang="en">About ▾</span>
                     <span data-lang="fr">À Propos ▾</span>
                     <span data-lang="ko">소개 ▾</span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="/about"><span data-lang="en">About the Author</span><span data-lang="fr">À Propos de l'Auteure</span><span data-lang="ko">저자 소개</span></a></li>
+                    <li><a href="/about" class="nav-active"><span data-lang="en">About the Author</span><span data-lang="fr">À Propos de l'Auteure</span><span data-lang="ko">저자 소개</span></a></li>
                     <li><a href="/book"><span data-lang="en">About the Book</span><span data-lang="fr">À Propos du Livre</span><span data-lang="ko">책 소개</span></a></li>
                 </ul>
             </li>
@@ -46,37 +45,57 @@
 </header>
 
 
-<section id="hero">
-    <div class="hero-inner">
-        <div class="hero-text">
-            <h1 class="hero-title">{{ site.hero_title }}</h1>
-
-            <p class="hero-byline">
-                <span data-lang="en">by Dr. Natacha Moorooven</span>
-                <span data-lang="fr">par Dr. Natacha Moorooven</span>
-                <span data-lang="ko">나타샤 무루벤 박사 저</span>
-            </p>
-
-            <p class="hero-desc" data-lang="en">{{ site.hero_desc_en }}</p>
-            <p class="hero-desc" data-lang="fr">{{ site.hero_desc_fr }}</p>
-            <p class="hero-desc" data-lang="ko">{{ site.hero_desc_ko }}</p>
-
-            <div class="hero-cta">
-                <a href="/book" class="btn-cta" data-lang="en">Get Your Copy</a>
-                <a href="/book" class="btn-cta" data-lang="fr">Obtenir votre exemplaire</a>
-                <a href="/book" class="btn-cta" data-lang="ko">구매하기</a>
+<section id="about">
+    <div class="section-inner about-layout">
+        <div class="about-photo-wrap">
+            <img src="/images/profile.jpg"
+                 alt="Dr. Natacha Moorooven"
+                 class="about-photo"
+                 onerror="this.style.display='none';document.getElementById('photo-ph').style.display='flex'">
+            <div class="photo-placeholder" id="photo-ph">
+                <span>Dr. Natacha<br>Moorooven</span>
             </div>
         </div>
 
-        <div class="hero-book-wrap">
-            <img src="/images/book-cover.jpg"
-                 alt="Un Ruisseau Dans le Désert — Dr. Natacha Moorooven"
-                 class="hero-book-img"
-                 onerror="this.style.display='none';document.getElementById('book-ph-hero').style.display='flex'">
-            <div class="book-placeholder" id="book-ph-hero">
-                <span>{{ site.hero_title }}</span>
-                <small>Dr. Natacha Moorooven</small>
-            </div>
+        <div class="about-text">
+            <h2>
+                <span data-lang="en">About the Author</span>
+                <span data-lang="fr">À Propos de l'Auteure</span>
+                <span data-lang="ko">저자 소개</span>
+            </h2>
+
+            <div class="about-body" data-lang="en">{{ site.about_en | md | safe }}</div>
+            <div class="about-body" data-lang="fr">{{ site.about_fr | md | safe }}</div>
+            <div class="about-body" data-lang="ko">{{ site.about_ko | md | safe }}</div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="section-alt">
+    <div class="section-inner centered">
+        <h2 class="section-title">
+            <span data-lang="en">Contact</span>
+            <span data-lang="fr">Contact</span>
+            <span data-lang="ko">연락처</span>
+        </h2>
+
+        <div class="contact-card">
+            <span class="contact-icon">✉</span>
+
+            <p class="contact-intro" data-lang="en">For speaking invitations, media inquiries, or partnership opportunities, I'd love to hear from you.</p>
+            <p class="contact-intro" data-lang="fr">Pour des invitations à prendre la parole, des demandes médias ou des opportunités de partenariat, n'hésitez pas à me contacter.</p>
+            <p class="contact-intro" data-lang="ko">강연 초청, 미디어 문의, 협업 제안은 아래로 연락해 주세요.</p>
+
+            <a href="mailto:{{ site.contact_email }}" class="btn-cta contact-btn">
+                <span data-lang="en">Send a Message</span>
+                <span data-lang="fr">Envoyer un Message</span>
+                <span data-lang="ko">메시지 보내기</span>
+            </a>
+
+            <p class="contact-affil" data-lang="en">Assistant Professor · Yongin University · South Korea</p>
+            <p class="contact-affil" data-lang="fr">Professeure adjointe · Université de Yongin · Corée du Sud</p>
+            <p class="contact-affil" data-lang="ko">조교수 · 용인대학교 · 대한민국</p>
         </div>
     </div>
 </section>
