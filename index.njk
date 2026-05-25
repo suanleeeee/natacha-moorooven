@@ -10,7 +10,7 @@
 
 <body class="lang-en">
 
-<header id="site-header">
+<header id="site-header" class="scrolled">
     <nav class="navbar">
         <a href="/" class="nav-logo">
             <img class="logo logo-color" src="/images/logo-color.png" alt="Dr. Natacha Moorooven">
@@ -124,7 +124,7 @@
     })();
     function toggleMenu() { document.getElementById('nav-links').classList.toggle('open'); }
     window.addEventListener('scroll', function() {
-        document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 60);
+        document.getElementById('site-header').classList.add('scrolled');
     });
     document.querySelectorAll('.dropdown-toggle').forEach(function(t) {
         t.addEventListener('click', function(e) {

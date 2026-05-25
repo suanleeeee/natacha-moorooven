@@ -211,7 +211,7 @@
     })();
     function toggleMenu() { document.getElementById('nav-links').classList.toggle('open'); }
     window.addEventListener('scroll', function() {
-        document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 60);
+        document.getElementById('site-header').classList.add('scrolled');
     });
     document.querySelectorAll('a[href^="#"]').forEach(function(a) {
         a.addEventListener('click', function(e) {
