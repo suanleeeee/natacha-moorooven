@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Natacha Moorooven</title>
+    <title>Audiobook — Dr. Natacha Moorooven</title>
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -13,7 +13,6 @@
 <header id="site-header" class="scrolled">
     <nav class="navbar">
         <a href="/" class="nav-logo">
-            <img class="logo logo-color" src="/images/logo-color.png" alt="Dr. Natacha Moorooven">
             <img class="logo logo-navy" src="/images/logo-navy.png" alt="Dr. Natacha Moorooven">
         </a>
 
@@ -30,7 +29,7 @@
                 </ul>
             </li>
             <li><a href="/purchase"><span data-lang="en">Purchase</span><span data-lang="fr">Acheter</span><span data-lang="ko">구매</span></a></li>
-            <li><a href="/audio"><span data-lang="en">Audio</span><span data-lang="fr">Audio</span><span data-lang="ko">오디오북</span></a></li>
+            <li><a href="/audio" class="nav-active"><span data-lang="en">Audio</span><span data-lang="fr">Audio</span><span data-lang="ko">오디오북</span></a></li>
             <li><a href="/about#contact"><span data-lang="en">Contact</span><span data-lang="fr">Contact</span><span data-lang="ko">연락처</span></a></li>
         </ul>
 
@@ -49,45 +48,20 @@
 </header>
 
 
-<section id="hero">
-    <div class="hero-inner">
-        <div class="hero-text">
-            <h1 class="hero-title">{{ site.hero_title }}</h1>
+<section id="audio">
+    <div class="section-inner centered">
+        <h2 class="section-title">
+            <span data-lang="en">Audiobook</span>
+            <span data-lang="fr">Livre Audio</span>
+            <span data-lang="ko">오디오북</span>
+        </h2>
 
-            <p class="hero-byline">
-                <span data-lang="en">by Dr. Natacha Moorooven</span>
-                <span data-lang="fr">par Dr. Natacha Moorooven</span>
-                <span data-lang="ko">나타샤 무루벤 박사 저</span>
-            </p>
-
-            <p class="hero-desc" data-lang="en">{{ site.hero_desc_en }}</p>
-            <p class="hero-desc" data-lang="fr">{{ site.hero_desc_fr }}</p>
-            <p class="hero-desc" data-lang="ko">{{ site.hero_desc_ko }}</p>
-
-            <div class="hero-cta">
-                <a href="/book" class="btn-cta" data-lang="en">Get Your Copy</a>
-                <a href="/book" class="btn-cta" data-lang="fr">Obtenir votre exemplaire</a>
-                <a href="/book" class="btn-cta" data-lang="ko">구매하기</a>
-            </div>
+        <div class="audio-placeholder">
+            <div class="audio-icon">♪</div>
+            <p data-lang="en">Audiobook coming soon.<br>Check back here for updates.</p>
+            <p data-lang="fr">Livre audio disponible prochainement.<br>Revenez bientôt.</p>
+            <p data-lang="ko">오디오북 출시 예정입니다.<br>곧 업데이트됩니다.</p>
         </div>
-
-        <div class="hero-book-wrap">
-            <img src="/images/book-cover.jpg"
-                 alt="Un Ruisseau Dans le Désert — Dr. Natacha Moorooven"
-                 class="hero-book-img"
-                 onerror="this.style.display='none';document.getElementById('book-ph-hero').style.display='flex'">
-            <div class="book-placeholder" id="book-ph-hero">
-                <span>{{ site.hero_title }}</span>
-                <small>Dr. Natacha Moorooven</small>
-            </div>
-        </div>
-    </div>
-
-    <div class="wave-bottom">
-        <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <rect width="1440" height="70" fill="#1e3a5f"/>
-            <path d="M0,35 Q360,70 720,35 Q1080,0 1440,35 L1440,70 L0,70 Z" fill="#fcf6e8"/>
-        </svg>
     </div>
 </section>
 
