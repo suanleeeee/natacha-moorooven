@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
   // Pass through static files unchanged
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("audio");
   eleventyConfig.addPassthroughCopy("admin");
 
   return {
