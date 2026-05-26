@@ -34,6 +34,11 @@ about_ko: |
   2014년 3월부터 용인대학교 조교수로 재직 중입니다.
 
 # ── BOOK ──────────────────────────────────────────────────────
+# Language availability: "available" or "coming_soon"
+book_lang_fr: "available"
+book_lang_en: "coming_soon"
+book_lang_ko: "coming_soon"
+
 book_desc_en: "This devotional book, born from passion and lived experience, invites readers into a journey of spiritual renewal. Each page offers a stream of hope for those walking through their own desert seasons of life."
 book_desc_fr: "Ce livre de dévotion, né de la passion et de l'expérience vécue, invite les lecteurs dans un voyage de renouveau spirituel. Chaque page offre un ruisseau d'espoir pour ceux qui traversent leurs propres saisons de désert."
 book_desc_ko: "열정과 삶의 경험에서 탄생한 이 묵상집은 독자들을 영적 쇄신의 여정으로 초대합니다. 각 페이지는 삶의 광야 시절을 걷고 있는 이들에게 희망의 작은 시냇물을 선사합니다."

@@ -73,6 +73,30 @@
                 <p data-lang="fr">{{ site.book_desc_fr }}</p>
                 <p data-lang="ko">{{ site.book_desc_ko }}</p>
 
+                <div class="book-lang-status">
+                    <div class="lang-badge {% if site.book_lang_fr == 'available' %}lang-available{% else %}lang-soon{% endif %}">
+                        <span class="lang-flag">🇫🇷</span>
+                        <span class="lang-name">Français</span>
+                        <span class="lang-status" data-lang="en">{% if site.book_lang_fr == 'available' %}Available{% else %}Coming Soon{% endif %}</span>
+                        <span class="lang-status" data-lang="fr">{% if site.book_lang_fr == 'available' %}Disponible{% else %}Bientôt{% endif %}</span>
+                        <span class="lang-status" data-lang="ko">{% if site.book_lang_fr == 'available' %}출시됨{% else %}준비 중{% endif %}</span>
+                    </div>
+                    <div class="lang-badge {% if site.book_lang_en == 'available' %}lang-available{% else %}lang-soon{% endif %}">
+                        <span class="lang-flag">🇬🇧</span>
+                        <span class="lang-name">English</span>
+                        <span class="lang-status" data-lang="en">{% if site.book_lang_en == 'available' %}Available{% else %}Coming Soon{% endif %}</span>
+                        <span class="lang-status" data-lang="fr">{% if site.book_lang_en == 'available' %}Disponible{% else %}Bientôt{% endif %}</span>
+                        <span class="lang-status" data-lang="ko">{% if site.book_lang_en == 'available' %}출시됨{% else %}준비 중{% endif %}</span>
+                    </div>
+                    <div class="lang-badge {% if site.book_lang_ko == 'available' %}lang-available{% else %}lang-soon{% endif %}">
+                        <span class="lang-flag">🇰🇷</span>
+                        <span class="lang-name">한국어</span>
+                        <span class="lang-status" data-lang="en">{% if site.book_lang_ko == 'available' %}Available{% else %}Coming Soon{% endif %}</span>
+                        <span class="lang-status" data-lang="fr">{% if site.book_lang_ko == 'available' %}Disponible{% else %}Bientôt{% endif %}</span>
+                        <span class="lang-status" data-lang="ko">{% if site.book_lang_ko == 'available' %}출시됨{% else %}준비 중{% endif %}</span>
+                    </div>
+                </div>
+
                 <div class="book-cta">
                     <a href="/natacha-moorooven/preview" class="btn-secondary" data-lang="en">Read Preview →</a>
                     <a href="/natacha-moorooven/preview" class="btn-secondary" data-lang="fr">Lire l'Extrait →</a>

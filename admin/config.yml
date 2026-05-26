@@ -65,6 +65,33 @@ collections:
             widget: "hidden"
             default: ""
 
+          - label: "Language Availability — Français"
+            name: "book_lang_fr"
+            widget: "select"
+            options:
+              - { label: "✅ Available / Disponible / 출시됨", value: "available" }
+              - { label: "⏳ Coming Soon / Bientôt / 준비 중", value: "coming_soon" }
+            default: "available"
+            hint: "Set to 'Available' once the French edition is published."
+
+          - label: "Language Availability — English"
+            name: "book_lang_en"
+            widget: "select"
+            options:
+              - { label: "✅ Available / Disponible / 출시됨", value: "available" }
+              - { label: "⏳ Coming Soon / Bientôt / 준비 중", value: "coming_soon" }
+            default: "coming_soon"
+            hint: "Change to 'Available' when the English edition is ready."
+
+          - label: "Language Availability — 한국어"
+            name: "book_lang_ko"
+            widget: "select"
+            options:
+              - { label: "✅ Available / Disponible / 출시됨", value: "available" }
+              - { label: "⏳ Coming Soon / Bientôt / 준비 중", value: "coming_soon" }
+            default: "coming_soon"
+            hint: "Change to 'Available' when the Korean edition is ready."
+
           - label: "Book Description — English"
             name: "book_desc_en"
             widget: "text"
