@@ -300,7 +300,7 @@ body.lang-ko a.btn-outline[data-lang="ko"] { display: inline-block; }
 /* Book cover in hero */
 .hero-book-wrap {
     flex-shrink: 0;
-    width: 260px;
+    width: 380px;
     display: flex;
     justify-content: center;
     align-items: center;
