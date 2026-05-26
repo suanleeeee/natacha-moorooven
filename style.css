@@ -56,6 +56,11 @@ body.lang-fr a[data-lang="fr"] { display: inline; }
 body.lang-ko span[data-lang="ko"],
 body.lang-ko a[data-lang="ko"] { display: inline; }
 
+/* inline-flex elements must stay inline-flex when shown */
+body.lang-en span.hero-edition-tag[data-lang="en"],
+body.lang-fr span.hero-edition-tag[data-lang="fr"],
+body.lang-ko span.hero-edition-tag[data-lang="ko"] { display: inline-flex; }
+
 /* Button-type anchors need inline-block, not inline */
 body.lang-en a.btn-cta[data-lang="en"],
 body.lang-en a.btn-secondary[data-lang="en"],
@@ -261,6 +266,18 @@ body.lang-ko a.btn-outline[data-lang="ko"] { display: inline-block; }
     color: var(--white);
     margin-bottom: 1.2rem;
     letter-spacing: -0.01em;
+}
+
+.hero-title-deco {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.3rem;
+    border-left: 2px solid var(--brown-light);
+    padding-left: 0.7rem;
 }
 
 .hero-byline {
