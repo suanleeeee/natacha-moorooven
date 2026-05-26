@@ -221,7 +221,7 @@ body.lang-ko a.btn-outline[data-lang="ko"] { display: inline-block; }
 /* ── HERO ────────────────────────────────────────────────────── */
 #hero {
     min-height: 100vh;
-    background: linear-gradient(145deg, #1a2f4e 0%, var(--navy) 40%, #243f65 100%);
+    background: var(--cream);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,20 +230,8 @@ body.lang-ko a.btn-outline[data-lang="ko"] { display: inline-block; }
     padding: 100px 2rem 80px;
 }
 
-/* Soft warm glow overlay */
-#hero::before {
-    content: '';
-    position: absolute;
-    top: -10%;
-    right: -5%;
-    width: 55%;
-    height: 130%;
-    background: radial-gradient(ellipse at center, rgba(184,151,106,0.12) 0%, transparent 65%);
-    pointer-events: none;
-}
-
 .hero-inner {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     display: flex;
@@ -251,21 +239,21 @@ body.lang-ko a.btn-outline[data-lang="ko"] { display: inline-block; }
     gap: 5rem;
 }
 
-.hero-text { flex: 1; color: var(--white); }
+.hero-text { flex: 1; color: var(--navy); }
 
 .hero-title {
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     font-size: clamp(2.6rem, 5.5vw, 4.2rem);
     font-weight: 600;
     line-height: 1.12;
-    color: var(--white);
+    color: var(--navy);
     margin-bottom: 1.2rem;
     letter-spacing: -0.01em;
 }
 
 .hero-byline {
     font-size: 0.92rem;
-    color: var(--brown-light);
+    color: var(--brown);
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-weight: 300;
@@ -274,7 +262,7 @@ body.lang-ko a.btn-outline[data-lang="ko"] { display: inline-block; }
 
 .hero-desc {
     font-size: 1.05rem;
-    color: rgba(255,255,255,0.75);
+    color: rgba(30,58,95,0.75);
     max-width: 440px;
     margin-bottom: 2.5rem;
     line-height: 1.85;
@@ -300,7 +288,7 @@ body.lang-ko a.btn-outline[data-lang="ko"] { display: inline-block; }
 /* Book cover in hero */
 .hero-book-wrap {
     flex-shrink: 0;
-    width: 380px;
+    width: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,13 +297,13 @@ body.lang-ko a.btn-outline[data-lang="ko"] { display: inline-block; }
     width: 100%;
     border-radius: 6px;
     box-shadow:
-        -8px 8px 25px rgba(0,0,0,0.45),
-        0 20px 60px rgba(0,0,0,0.4);
-    transform: perspective(1000px) rotateY(-7deg) rotateX(2deg);
+        -10px 12px 30px rgba(0,0,0,0.25),
+        0 25px 60px rgba(0,0,0,0.15);
+    transform: perspective(1000px) rotateY(-5deg) rotateX(1deg);
     transition: transform 0.35s ease;
 }
 .hero-book-img:hover {
-    transform: perspective(1000px) rotateY(-2deg) rotateX(0deg) translateY(-6px);
+    transform: perspective(1000px) rotateY(-1deg) rotateX(0deg) translateY(-6px);
 }
 
 .book-placeholder {
