@@ -534,6 +534,36 @@ h2.section-title::after,
     font-size: 1.02rem;
 }
 
+.book-lang-status {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+.lang-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+.lang-available {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+.lang-soon {
+    background: #fff8e1;
+    color: #8d6e1a;
+    border: 1px solid #ffe082;
+}
+.lang-flag { font-size: 1rem; }
+.lang-name { font-weight: 700; }
+.lang-status { opacity: 0.85; }
+
 .book-cta { display: flex; flex-wrap: wrap; gap: 0.8rem; }
 
 .btn-secondary {
